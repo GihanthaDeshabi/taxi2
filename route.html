@@ -1,0 +1,342 @@
+<!doctype html>
+<!-- =============================================================
+     ROUTE PAGE TEMPLATE
+     -------------------------------------------------------------
+     This example is filled in for Colombo Airport → Galle.
+     To make a page for another route:
+       1. Copy this file and rename it to the "page" name in main.js
+          (for example kandy-to-ella-taxi.html).
+       2. Change every line marked  ROUTE:  below.
+       3. Change data-from and data-to on the price box. They must match
+          the from / to names in ROUTES in main.js exactly.
+       4. Write new stops, FAQs and reviews for that route.
+     Prices and travel time come from main.js, so you never type them here.
+     ============================================================= -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- ROUTE: title (under 60 characters) and description (under 155) -->
+  <title>Colombo Airport to Galle Taxi — Fixed Price | [BRAND NAME]</title>
+  <meta name="description" content="Private taxi from Colombo Airport (BIA) to Galle at a fixed price per car. English-speaking driver, tolls and fuel included, free waiting time. Book on WhatsApp.">
+  <link rel="canonical" href="https://[YOUR-DOMAIN]/colombo-airport-to-galle-taxi.html">
+  <meta name="theme-color" content="#F7F3EA">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="[BRAND NAME]">
+  <meta property="og:title" content="Colombo Airport to Galle taxi — fixed price per car">
+  <meta property="og:description" content="Private transfer from Colombo Airport to Galle. English-speaking driver, tolls included. Book on WhatsApp.">
+  <meta property="og:url" content="https://[YOUR-DOMAIN]/colombo-airport-to-galle-taxi.html">
+  <meta property="og:image" content="https://[YOUR-DOMAIN]/img/og-galle.jpg"><!-- ROUTE: a real photo from this route, 1200 × 630 px -->
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preload" href="fonts/archivo-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/public-sans-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <script src="main.js" defer></script>
+  <!-- Google Analytics 4: paste the same tag as on index.html here -->
+
+  <!-- ROUTE: schema — change the names and the page address -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://[YOUR-DOMAIN]/" },
+          { "@type": "ListItem", "position": 2, "name": "Colombo Airport to Galle taxi", "item": "https://[YOUR-DOMAIN]/colombo-airport-to-galle-taxi.html" }
+        ]
+      },
+      {
+        "@type": "TaxiService",
+        "name": "Colombo Airport to Galle taxi",
+        "serviceType": "Airport transfer",
+        "provider": { "@type": "LocalBusiness", "@id": "https://[YOUR-DOMAIN]/#business", "name": "[BRAND NAME]", "telephone": "+94XXXXXXXXX" },
+        "areaServed": [
+          { "@type": "Airport", "name": "Bandaranaike International Airport", "iataCode": "CMB" },
+          { "@type": "City", "name": "Galle" }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="index.html">[BRAND NAME]<small>Sri Lanka taxi transfers</small></a>
+    <nav id="site-nav" class="nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html#prices">Prices</a></li>
+        <li><a href="index.html#how">How it works</a></li>
+        <li><a href="index.html#reviews">Reviews</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn--wa btn--small header-wa" href="https://wa.me/94XXXXXXXXX" data-wa="hello"
+       data-track="whatsapp_click" data-track-location="route_page_header">
+      <img class="wa-icon" src="img/whatsapp-icon.svg" alt="" width="20" height="20" onerror="this.remove()">
+      WhatsApp
+    </a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav">
+      Menu
+      <svg viewBox="0 0 18 18" aria-hidden="true"><path d="M2 4h14M2 9h14M2 14h14" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ===== Route hero: H1, facts and the price box ===== -->
+<section class="route-hero" aria-labelledby="route-title">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#prices">Routes</a></li>
+        <li aria-current="page">Colombo Airport to Galle</li><!-- ROUTE -->
+      </ol>
+    </nav>
+
+    <div class="route-hero__grid" style="margin-top: var(--space-6)">
+      <div class="route-hero__text">
+        <span class="label">Private taxi · fixed price per car</span>
+        <h1 id="route-title">Colombo Airport to Galle Taxi</h1><!-- ROUTE -->
+        <!-- ROUTE: 2–3 sentences, written for this route -->
+        <p class="hero__lead">Your driver meets you at arrivals with a name board and drives you straight to your hotel in Galle or the Fort. The price is fixed before you travel and includes the expressway tolls.</p>
+      </div>
+
+      <!-- Price box: the same component as the home page, with a fixed route.
+           data-from / data-to must match ROUTES in main.js exactly. -->
+      <form class="finder route-hero__price" id="price-finder" data-finder data-from="Colombo Airport (BIA)" data-to="Galle"
+            aria-labelledby="finder-title" onsubmit="return false">
+        <div class="finder__top">
+          <div class="finder__head">
+            <h2 id="finder-title">Fixed price</h2>
+            <span class="label">USD · per car</span>
+          </div>
+          <fieldset class="vehicle-pick">
+            <legend>Vehicle</legend>
+            <div class="vehicle-pick__row">
+              <label class="vp">
+                <input type="radio" name="vehicle" value="car" checked>
+                <span class="vp__tick" aria-hidden="true"></span>
+                <span class="vp__name">Car</span>
+                <span class="vp__cap" data-cap="car">3 people, 3 bags</span>
+                <span class="vp__price" data-price="car">[$XX]</span>
+              </label>
+              <label class="vp">
+                <input type="radio" name="vehicle" value="van">
+                <span class="vp__tick" aria-hidden="true"></span>
+                <span class="vp__name">Van</span>
+                <span class="vp__cap" data-cap="van">8 people, 8 bags</span>
+                <span class="vp__price" data-price="van">[$XX]</span>
+              </label>
+            </div>
+          </fieldset>
+          <p class="finder__per-car"><strong>Per car, not per person.</strong> Nothing extra to pay at the end.</p>
+          <p class="visually-hidden" aria-live="polite" data-finder-route></p>
+        </div>
+        <div class="finder__stub">
+          <p class="finder__included" data-finder-included>Includes fuel, highway tolls, the driver, flight tracking and [60] minutes of free waiting at the airport.</p>
+          <a class="btn btn--wa btn--block" href="https://wa.me/94XXXXXXXXX" target="_blank" rel="noopener"
+             data-finder-book data-track="whatsapp_click" data-track-location="route_page_price_box">
+            <img class="wa-icon" src="img/whatsapp-icon.svg" alt="" width="20" height="20" onerror="this.remove()">
+            Book on WhatsApp
+          </a>
+          <p class="status" data-status><span class="status__dot" aria-hidden="true"></span><span class="status__text">WhatsApp replies within 15 minutes, 6 AM – 11 PM Sri Lanka time.</span></p>
+        </div>
+      </form>
+
+      <div class="route-hero__facts">
+        <dl class="route-facts">
+          <div><dt>From</dt><dd>Bandaranaike International Airport (BIA / CMB), Katunayake</dd></div><!-- ROUTE -->
+          <div><dt>To</dt><dd>Galle, Galle Fort, Unawatuna [or your hotel]</dd></div><!-- ROUTE -->
+          <div><dt>Distance</dt><dd class="mono">[~150 km]</dd></div><!-- ROUTE: check on Google Maps -->
+          <div><dt>Time</dt><dd><span class="mono" data-route-time>2h 30m</span> without stops</dd></div>
+          <div><dt>Road</dt><dd>Airport Expressway (E03), Outer Circular (E02), Southern Expressway (E01). Tolls included.</dd></div><!-- ROUTE -->
+        </dl>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== Good stops on the way ===== -->
+<section class="section section--sunk" aria-labelledby="stops-title">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="label">On the way</span>
+      <h2 id="stops-title">Good stops on the way</h2>
+      <!-- ROUTE -->
+      <p>Without stops, we take the expressway. With stops, we take the coast road (Galle Road). It is slower, but it runs next to the sea. Tell us your stops when you book and we include them in the fixed price.</p>
+    </div>
+    <!-- ROUTE: 3–4 real stops. The left column is the extra time each stop adds. -->
+    <ol class="stops">
+      <li>
+        <span class="mono">+[1h]</span>
+        <div>
+          <h3>Bentota</h3>
+          <p>A beach and river town about halfway. A good place for lunch and a swim.</p>
+        </div>
+      </li>
+      <li>
+        <span class="mono">+[45m]</span>
+        <div>
+          <h3>Madu River, Balapitiya</h3>
+          <p>Boat rides through the mangroves and small islands. Boat tickets are paid at the river.</p>
+        </div>
+      </li>
+      <li>
+        <span class="mono">+[30m]</span>
+        <div>
+          <h3>Kosgoda</h3>
+          <p>Sea turtle hatcheries next to the beach. Entrance is paid at the gate.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ===== Route FAQ (Google schema is made from this automatically) ===== -->
+<section class="section" aria-labelledby="rfaq-title">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="label">This route</span>
+      <h2 id="rfaq-title">Questions about Colombo Airport to Galle</h2><!-- ROUTE -->
+    </div>
+    <!-- ROUTE: 3–4 questions people really ask about this route -->
+    <div class="faq">
+      <details>
+        <summary>How long is the drive from Colombo Airport to Galle?</summary>
+        <div class="faq__answer"><p>About 2 hours 30 minutes on the expressway, without stops. Traffic around Colombo can add time at busy hours.</p></div>
+      </details>
+      <details>
+        <summary>Are the expressway tolls included?</summary>
+        <div class="faq__answer"><p>Yes. The price includes all tolls, fuel and the driver. You pay nothing extra on the road.</p></div>
+      </details>
+      <details>
+        <summary>My flight lands at night. Can you pick me up?</summary>
+        <div class="faq__answer"><p>Yes. We track your flight, so a late landing is not a problem. [Night pickups cost the same / cost $X extra after X PM.]</p></div>
+      </details>
+      <details>
+        <summary>Can we stop at Bentota or the Madu River on the way?</summary>
+        <div class="faq__answer"><p>Yes. Tell us when you book. We take the coast road and add the extra time to your fixed price before you travel. [$X per extra hour.]</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Reviews from this route (REAL reviews only) ===== -->
+<section class="section section--sunk" aria-labelledby="rrev-title">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="label">Google · TripAdvisor</span>
+      <h2 id="rrev-title">Travellers who took this route</h2>
+    </div>
+    <div class="cards cards--2">
+      <figure class="review">
+        <span class="review__stars">[5/5]</span>
+        <blockquote><p>[Paste a real review from a traveller who took this route, word for word.]</p></blockquote>
+        <figcaption><b>[First name]</b>, [Country] · [Month Year]<br><a href="[LINK TO THIS REVIEW]">Read on [Google]</a></figcaption>
+      </figure>
+      <figure class="review">
+        <span class="review__stars">[5/5]</span>
+        <blockquote><p>[Paste a real review from a traveller who took this route, word for word.]</p></blockquote>
+        <figcaption><b>[First name]</b>, [Country] · [Month Year]<br><a href="[LINK TO THIS REVIEW]">Read on [TripAdvisor]</a></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Other routes (internal links help Google) ===== -->
+<section class="section" aria-labelledby="other-title">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 id="other-title">Other routes from Colombo Airport</h2><!-- ROUTE -->
+    </div>
+    <ul class="other-routes">
+      <li><a href="colombo-airport-to-kandy-taxi.html">Colombo Airport to Kandy <span class="mono" aria-hidden="true">→</span></a></li>
+      <li><a href="colombo-airport-to-sigiriya-taxi.html">Colombo Airport to Sigiriya <span class="mono" aria-hidden="true">→</span></a></li>
+      <li><a href="colombo-airport-to-ella-taxi.html">Colombo Airport to Ella <span class="mono" aria-hidden="true">→</span></a></li>
+      <li><a href="colombo-airport-to-mirissa-taxi.html">Colombo Airport to Mirissa <span class="mono" aria-hidden="true">→</span></a></li>
+    </ul>
+    <p style="margin-top: var(--space-6)"><a href="index.html#prices">See all routes and prices</a></p>
+  </div>
+</section>
+
+<!-- ===== Final call to action ===== -->
+<section class="section section--tea cta on-dark" aria-labelledby="cta-title">
+  <div class="wrap">
+    <h2 id="cta-title">Tell us your date. We reply within 15 minutes, 6 AM – 11 PM.</h2>
+    <p class="cta__lead">Send your flight number and hotel name, and we confirm your driver and car.</p>
+    <a class="btn btn--wa" href="https://wa.me/94XXXXXXXXX" data-wa="hello" data-track="whatsapp_click" data-track-location="route_page_cta">
+      <img class="wa-icon" src="img/whatsapp-icon.svg" alt="" width="20" height="20" onerror="this.remove()">
+      Message us on WhatsApp
+    </a>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer on-dark">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <p class="footer__brand">[BRAND NAME]</p>
+        <p>Fixed-price private taxis for travellers in Sri Lanka.</p>
+        <ul class="footer__list">
+          <li>WhatsApp: <a href="https://wa.me/94XXXXXXXXX" data-wa="hello" data-track="whatsapp_click" data-track-location="footer">+94 XX XXX XXXX</a></li>
+          <li>Email: <a href="mailto:[EMAIL]">[EMAIL]</a></li>
+          <li>Address: [STREET ADDRESS, TOWN]</li>
+          <li>SLTDA registration: [NUMBER]</li>
+          <li>Open every day, 6 AM – 11 PM (Sri Lanka time)</li>
+        </ul>
+      </div>
+      <nav aria-labelledby="footer-routes">
+        <h2 id="footer-routes">Route pages</h2>
+        <ul class="footer__list">
+          <li><a href="colombo-airport-to-galle-taxi.html">Colombo Airport to Galle taxi</a></li>
+          <li><a href="colombo-airport-to-kandy-taxi.html">Colombo Airport to Kandy taxi</a></li>
+          <li><a href="colombo-airport-to-sigiriya-taxi.html">Colombo Airport to Sigiriya taxi</a></li>
+          <li><a href="colombo-airport-to-ella-taxi.html">Colombo Airport to Ella taxi</a></li>
+          <li><a href="colombo-airport-to-mirissa-taxi.html">Colombo Airport to Mirissa taxi</a></li>
+          <li><a href="colombo-airport-to-colombo-taxi.html">Colombo Airport to Colombo taxi</a></li>
+          <li><a href="kandy-to-ella-taxi.html">Kandy to Ella taxi</a></li>
+          <li><a href="sigiriya-to-kandy-taxi.html">Sigiriya to Kandy taxi</a></li>
+          <li><a href="ella-to-mirissa-taxi.html">Ella to Mirissa taxi</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2>On this site</h2>
+        <ul class="footer__list">
+          <li><a href="index.html#prices">Prices</a></li>
+          <li><a href="index.html#how">How it works</a></li>
+          <li><a href="index.html#reviews">Reviews</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+          <li><a href="index.html#book">Book</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__legal">
+      <p><strong>Privacy:</strong> this website does not store your personal details. WhatsApp buttons only open a chat with us. [We use Google Analytics to count visits and button clicks. Delete this sentence if you don't use it.]</p>
+      <p>© <span data-year>2026</span> [BRAND NAME].</p>
+    </div>
+  </div>
+</footer>
+
+<div class="sticky-bar">
+  <a class="btn btn--outline" href="#price-finder" data-track="get_price_click" data-track-location="route_page_sticky_bar">Get price</a>
+  <a class="btn btn--wa" href="https://wa.me/94XXXXXXXXX" data-wa="hello" data-track="whatsapp_click" data-track-location="route_page_sticky_bar">
+    <img class="wa-icon" src="img/whatsapp-icon.svg" alt="" width="20" height="20" onerror="this.remove()">
+    WhatsApp
+  </a>
+</div>
+
+</body>
+</html>

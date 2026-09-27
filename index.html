@@ -1,0 +1,657 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- ===== SEO: title and description (unique on every page) ===== -->
+  <title>Fixed-Price Taxi Transfers in Sri Lanka | Airport Pickups | [BRAND NAME]</title>
+  <meta name="description" content="Private taxis across Sri Lanka at a fixed price per car. Colombo Airport pickups and city-to-city rides with English-speaking drivers. See your price in seconds and book on WhatsApp.">
+  <link rel="canonical" href="https://[YOUR-DOMAIN]/">
+  <meta name="theme-color" content="#F7F3EA">
+
+  <!-- ===== Open Graph (how the link looks when shared on WhatsApp, Facebook) ===== -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="[BRAND NAME]">
+  <meta property="og:title" content="Fixed-price taxis across Sri Lanka — [BRAND NAME]">
+  <meta property="og:description" content="Airport pickups and city-to-city rides. Fixed price per car, English-speaking drivers. Book on WhatsApp.">
+  <meta property="og:url" content="https://[YOUR-DOMAIN]/">
+  <meta property="og:image" content="https://[YOUR-DOMAIN]/img/og-image.jpg"><!-- 1200 × 630 px real photo -->
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- ===== Fonts and styles ===== -->
+  <link rel="preload" href="fonts/archivo-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/public-sans-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <script src="main.js" defer></script>
+
+  <!-- ===== Google Analytics 4 — paste your tag here (G-XXXXXXX) =====
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXX');
+  </script>
+  -->
+
+  <!-- ===== Schema for Google: the business and the service ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://[YOUR-DOMAIN]/#business",
+        "name": "[BRAND NAME]",
+        "description": "Fixed-price private taxi transfers in Sri Lanka for travellers: airport pickups and city-to-city rides with English-speaking drivers.",
+        "url": "https://[YOUR-DOMAIN]/",
+        "telephone": "+94XXXXXXXXX",
+        "email": "[EMAIL]",
+        "image": "https://[YOUR-DOMAIN]/img/og-image.jpg",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "[STREET ADDRESS]",
+          "addressLocality": "[TOWN]",
+          "addressCountry": "LK"
+        },
+        "areaServed": { "@type": "Country", "name": "Sri Lanka" },
+        "openingHoursSpecification": [{
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+          "opens": "06:00",
+          "closes": "23:00"
+        }]
+      },
+      {
+        "@type": "TaxiService",
+        "@id": "https://[YOUR-DOMAIN]/#service",
+        "name": "Private taxi and airport transfers in Sri Lanka",
+        "serviceType": "Airport transfer and private taxi",
+        "provider": { "@id": "https://[YOUR-DOMAIN]/#business" },
+        "areaServed": { "@type": "Country", "name": "Sri Lanka" }
+      }
+    ]
+  }
+  </script>
+  <!-- The FAQPage schema is made automatically from the FAQ below (see main.js). -->
+</head>
+
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ============================================================
+     1. HEADER
+     ============================================================ -->
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="index.html">[BRAND NAME]<small>Sri Lanka taxi transfers</small></a>
+
+    <nav id="site-nav" class="nav" aria-label="Main">
+      <ul>
+        <li><a href="#prices">Prices</a></li>
+        <li><a href="#how">How it works</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
+
+    <a class="btn btn--wa btn--small header-wa" href="https://wa.me/94XXXXXXXXX" data-wa="hello"
+       data-track="whatsapp_click" data-track-location="header">
+      <img class="wa-icon" src="img/whatsapp-icon.svg" alt="" width="20" height="20" onerror="this.remove()">
+      WhatsApp
+    </a>
+
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav">
+      Menu
+      <svg viewBox="0 0 18 18" aria-hidden="true"><path d="M2 4h14M2 9h14M2 14h14" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============================================================
+     2. HERO + PRICE FINDER
+     ============================================================ -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="wrap hero__grid">
+
+    <div class="hero__text">
+      <h1 id="hero-title">Fixed-price taxis across Sri Lanka. Airport pickups and city-to-city rides.</h1>
+      <p class="hero__lead">English-speaking drivers. Clean cars and vans. No surprise costs at the end.</p>
+    </div>
+
+    <div class="hero__finder">
+      <form class="finder" id="price-finder" data-finder aria-labelledby="finder-title" onsubmit="return false">
+        <div class="finder__top">
+          <div class="finder__head">
+            <h2 id="finder-title">Get your fixed price</h2>
+            <span class="label">USD · per car</span>
+          </div>
+
+          <div class="finder__places">
+            <div class="field">
+              <label for="f-from">From</label>
+              <select id="f-from" class="select" data-finder-from></select>
+            </div>
+            <div class="field">
+              <label for="f-to">To</label>
+              <select id="f-to" class="select" data-finder-to></select>
+            </div>
+          </div>
+
+          <fieldset class="vehicle-pick">
+            <legend>Vehicle</legend>
+            <div class="vehicle-pick__row">
+              <label class="vp">
+                <input type="radio" name="vehicle" value="car" checked>
+                <span class="vp__tick" aria-hidden="true"></span>
+                <span class="vp__name">Car</span>
+                <span class="vp__cap" data-cap="car">3 people, 3 bags</span>
+                <span class="vp__price" data-price="car">[$XX]</span>
+              </label>
+              <label class="vp">
+                <input type="radio" name="vehicle" value="van">
+                <span class="vp__tick" aria-hidden="true"></span>
+                <span class="vp__name">Van</span>
+                <span class="vp__cap" data-cap="van">8 people, 8 bags</span>
+                <span class="vp__price" data-price="van">[$XX]</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <p class="finder__per-car"><strong>Per car, not per person.</strong> Nothing extra to pay at the end.</p>
+          <p class="visually-hidden" aria-live="polite" data-finder-route></p>
+        </div>
+
+        <div class="finder__stub">
+          <p class="finder__included" data-finder-included>Includes fuel, highway tolls, the driver, flight tracking and [60] minutes of free waiting at the airport.</p>
+          <a class="btn btn--wa btn--block" href="https://wa.me/94XXXXXXXXX" target="_blank" rel="noopener"
+             data-finder-book data-track="whatsapp_click" data-track-location="hero_finder">
+            <img class="wa-icon" src="img/whatsapp-icon.svg" alt="" width="20" height="20" onerror="this.remove()">
+            Book on WhatsApp
+          </a>
+          <p class="finder__alt">Can't find your route?
+            <a href="https://wa.me/94XXXXXXXXX" data-wa="ask" data-track="whatsapp_click" data-track-location="hero_unlisted_route">Message us</a>
+            and we'll reply with a price within 15 minutes.</p>
+        </div>
+      </form>
+    </div>
+
+    <div class="hero__more">
+      <ul class="facts">
+        <li><b>[4.9]/5</b><span><a href="[GOOGLE REVIEWS LINK]">Google rating</a> from [XX] reviews</span></li>
+        <li><b>[60] min</b><span>free waiting at the airport after your flight lands</span></li>
+        <li><b>[NUMBER]</b><span>our registration with Sri Lanka Tourism (SLTDA)</span></li>
+      </ul>
+      <p class="status" data-status><span class="status__dot" aria-hidden="true"></span><span class="status__text">WhatsApp replies within 15 minutes, 6 AM – 11 PM Sri Lanka time.</span></p>
+
+      <!-- PHOTO (desktop only): replace the div below with:
+      <img class="photo hero__photo" src="img/airport-pickup.webp" alt="Our driver holding a name board at Colombo Airport arrivals" width="1200" height="675" fetchpriority="high"> -->
+      <div class="photo-slot hero__photo">[PHOTO: our driver holding a name board at Colombo Airport arrivals]</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     3. POPULAR ROUTES — the timetable board
+     The rows come from ROUTES in main.js (prices in one place).
+     ============================================================ -->
+<section class="section section--sunk" id="prices" aria-labelledby="prices-title">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="label">Timetable · fixed prices</span>
+      <h2 id="prices-title">Popular routes and prices</h2>
+      <p>Prices are in US dollars, <strong>per car, not per person</strong>. Fuel, highway tolls and the driver are included. Tap a route for stops on the way and travel tips.</p>
+    </div>
+
+    <div class="board">
+      <table>
+        <caption class="visually-hidden">Fixed taxi prices per car, in US dollars</caption>
+        <thead>
+          <tr>
+            <th scope="col">Route</th>
+            <th scope="col">Time</th>
+            <th scope="col">Car · 1–3</th>
+            <th scope="col">Van · 4–8</th>
+            <th scope="col"><span class="visually-hidden">Book</span></th>
+          </tr>
+        </thead>
+        <tbody data-board></tbody>
+      </table>
+      <noscript><p style="padding:16px 0">Turn on JavaScript to see prices, or message us on WhatsApp for a price.</p></noscript>
+      <div class="board__note">
+        <span>Car: up to 3 people and 3 bags. Van: up to 8 people and 8 bags.</span>
+        <span>Can't find your route?
+          <a href="https://wa.me/94XXXXXXXXX" data-wa="ask" data-track="whatsapp_click" data-track-location="route_board_unlisted">Ask for a price</a></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     4. HOW IT WORKS
+     ============================================================ -->
+<section class="section" id="how" aria-labelledby="how-title">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="label">3 steps</span>
+      <h2 id="how-title">How it works</h2>
+    </div>
+    <ol class="steps">
+      <li class="step">
+        <span class="step__num" aria-hidden="true">1</span>
+        <div>
+          <h3>Send your route and date</h3>
+          <p>Message us on WhatsApp, or use the form below. Tell us where from, where to, the date and time. Flying in? Add your flight number.</p>
+        </div>
+      </li>
+      <li class="step">
+        <span class="step__num" aria-hidden="true">2</span>
+        <div>
+          <h3>Get your confirmation</h3>
+          <p>We reply within 15 minutes (6 AM – 11 PM) with your fixed price, your driver's name and a photo of the car.</p>
+        </div>
+      </li>
+      <li class="step">
+        <span class="step__num" aria-hidden="true">3</span>
+        <div>
+          <h3>Your driver meets you</h3>
+          <p>At the airport, your driver waits at the arrivals exit with a board showing your name. At a hotel, your driver comes to reception.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============================================================
+     5. WHAT'S INCLUDED (and what is not)
+     ============================================================ -->
+<section class="section section--sunk" id="included" aria-labelledby="incl-title">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="label">No hidden costs</span>
+      <h2 id="incl-title">What the price includes</h2>
+      <p>We would rather tell you now than surprise you at the end of the ride.</p>
+    </div>
+
+    <div class="incl">
+      <div class="yes">
+        <h3>Included</h3>
+        <ul>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 10.5l4.5 4.5L17 5.5" stroke="currentColor" stroke-width="2.4" fill="none"/></svg><span>Fuel and your driver</span></li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 10.5l4.5 4.5L17 5.5" stroke="currentColor" stroke-width="2.4" fill="none"/></svg><span>Highway (expressway) tolls</span></li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 10.5l4.5 4.5L17 5.5" stroke="currentColor" stroke-width="2.4" fill="none"/></svg><span>Free waiting: [60] minutes after your flight lands, [15] minutes at hotels</span></li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 10.5l4.5 4.5L17 5.5" stroke="currentColor" stroke-width="2.4" fill="none"/></svg><span>Flight tracking, so a late flight costs you nothing</span></li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 10.5l4.5 4.5L17 5.5" stroke="currentColor" stroke-width="2.4" fill="none"/></svg><span>Child seat on request (tell us the child's age)</span></li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 10.5l4.5 4.5L17 5.5" stroke="currentColor" stroke-width="2.4" fill="none"/></svg><span>Free cancellation up to [24] hours before pickup</span></li>
+        </ul>
+      </div>
+      <div class="no">
+        <h3>Not included</h3>
+        <ul>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 5l10 10M15 5L5 15" stroke="currentColor" stroke-width="2.2" fill="none"/></svg><span><strong>Entrance tickets</strong> if you stop at a sight on the way</span></li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 5l10 10M15 5L5 15" stroke="currentColor" stroke-width="2.2" fill="none"/></svg><span><strong>Your meals and drinks</strong></span></li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 5l10 10M15 5L5 15" stroke="currentColor" stroke-width="2.2" fill="none"/></svg><span><strong>Tips.</strong> Up to you. Never added to the price.</span></li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 5l10 10M15 5L5 15" stroke="currentColor" stroke-width="2.2" fill="none"/></svg><span><strong>Long stops or detours</strong> [$X per extra hour]. Tell us when you book and we add it to your fixed price.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     6. OUR VEHICLES
+     ============================================================ -->
+<section class="section" id="vehicles" aria-labelledby="veh-title">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="label">The cars</span>
+      <h2 id="veh-title">Our vehicles</h2>
+      <p>Real photos of the cars we drive. Both have air conditioning.</p>
+    </div>
+
+    <div class="cards cards--2">
+      <article class="vehicle">
+        <!-- PHOTO: replace the div below with:
+        <img class="photo" src="img/car.webp" alt="Our white [car model] parked at Colombo Airport arrivals" width="800" height="600" loading="lazy"> -->
+        <div class="photo-slot">[PHOTO: our white car at the airport arrivals gate, daylight]</div>
+        <h3>Car</h3>
+        <p class="vehicle__model">[Model, for example Toyota Axio or similar]</p>
+        <dl class="specs">
+          <div><dt>People</dt><dd>3</dd></div>
+          <div><dt>Big bags</dt><dd>3</dd></div>
+          <div><dt>A/C</dt><dd>Yes</dd></div>
+        </dl>
+      </article>
+
+      <article class="vehicle">
+        <!-- PHOTO: replace the div below with:
+        <img class="photo" src="img/van.webp" alt="Our [van model] with the side door open and luggage space" width="800" height="600" loading="lazy"> -->
+        <div class="photo-slot">[PHOTO: our van with the side door open, showing seats and bag space]</div>
+        <h3>Van</h3>
+        <p class="vehicle__model">[Model, for example Toyota KDH or similar]</p>
+        <dl class="specs">
+          <div><dt>People</dt><dd>8</dd></div>
+          <div><dt>Big bags</dt><dd>8</dd></div>
+          <div><dt>A/C</dt><dd>Yes</dd></div>
+        </dl>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     7. MEET THE DRIVERS
+     ============================================================ -->
+<section class="section section--sunk" id="drivers" aria-labelledby="drv-title">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="label">The people</span>
+      <h2 id="drv-title">Meet the drivers</h2>
+      <p>Every driver speaks English. You get your driver's name and photo when we confirm your ride.</p>
+    </div>
+
+    <div class="cards cards--3">
+      <article class="driver">
+        <!-- PHOTO: <img class="photo" src="img/driver-1.webp" alt="[First name], one of our drivers, standing next to his car" width="600" height="600" loading="lazy"> -->
+        <div class="photo-slot">[PHOTO: driver 1, face clearly visible]</div>
+        <div>
+          <h3>[First name]</h3>
+          <dl>
+            <dt>Languages: </dt><dd>[English, Sinhala]</dd>
+            <dt>Driving: </dt><dd>[X] years</dd>
+          </dl>
+        </div>
+      </article>
+      <article class="driver">
+        <!-- PHOTO: <img class="photo" src="img/driver-2.webp" alt="[First name], one of our drivers" width="600" height="600" loading="lazy"> -->
+        <div class="photo-slot">[PHOTO: driver 2, face clearly visible]</div>
+        <div>
+          <h3>[First name]</h3>
+          <dl>
+            <dt>Languages: </dt><dd>[English, Sinhala, Tamil]</dd>
+            <dt>Driving: </dt><dd>[X] years</dd>
+          </dl>
+        </div>
+      </article>
+      <article class="driver">
+        <!-- PHOTO: <img class="photo" src="img/driver-3.webp" alt="[First name], one of our drivers" width="600" height="600" loading="lazy"> -->
+        <div class="photo-slot">[PHOTO: driver 3, face clearly visible]</div>
+        <div>
+          <h3>[First name]</h3>
+          <dl>
+            <dt>Languages: </dt><dd>[English, Sinhala]</dd>
+            <dt>Driving: </dt><dd>[X] years</dd>
+          </dl>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     8. REVIEWS — paste REAL reviews only, word for word
+     ============================================================ -->
+<section class="section" id="reviews" aria-labelledby="rev-title">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="label">Google · TripAdvisor</span>
+      <h2 id="rev-title">What travellers say</h2>
+      <p>Real reviews, copied word for word. Each one links to the page where it was posted.</p>
+    </div>
+
+    <div class="cards cards--3">
+      <figure class="review">
+        <span class="review__stars">[5/5]</span>
+        <blockquote><p>[Paste a real review here, word for word. Two to four sentences is perfect.]</p></blockquote>
+        <figcaption><b>[First name]</b>, [Country] · [Month Year]<br>
+          <a href="[LINK TO THIS REVIEW]">Read on [Google]</a></figcaption>
+      </figure>
+      <figure class="review">
+        <span class="review__stars">[5/5]</span>
+        <blockquote><p>[Paste a real review here, word for word.]</p></blockquote>
+        <figcaption><b>[First name]</b>, [Country] · [Month Year]<br>
+          <a href="[LINK TO THIS REVIEW]">Read on [TripAdvisor]</a></figcaption>
+      </figure>
+      <figure class="review">
+        <span class="review__stars">[5/5]</span>
+        <blockquote><p>[Paste a real review here, word for word.]</p></blockquote>
+        <figcaption><b>[First name]</b>, [Country] · [Month Year]<br>
+          <a href="[LINK TO THIS REVIEW]">Read on [Google]</a></figcaption>
+      </figure>
+    </div>
+
+    <div class="reviews-links">
+      <a class="btn btn--outline" href="[GOOGLE REVIEWS LINK]">All reviews on Google</a>
+      <a class="btn btn--outline" href="[TRIPADVISOR LINK]">All reviews on TripAdvisor</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     9. FAQ — edit the text here only (Google schema is made from it)
+     ============================================================ -->
+<section class="section section--sunk" id="faq" aria-labelledby="faq-title">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="label">Before you book</span>
+      <h2 id="faq-title">Questions travellers ask</h2>
+    </div>
+
+    <div class="faq">
+      <details>
+        <summary>How do I pay?</summary>
+        <div class="faq__answer">
+          <p>[Pay the driver in cash at the end of the ride, in Sri Lankan rupees or US dollars.] [Card: yes / no.] [Deposit: no deposit needed / X% deposit by bank transfer.] The price is fixed when we confirm, so you know the full amount before you get in the car.</p>
+        </div>
+      </details>
+      <details>
+        <summary>What if my flight is late?</summary>
+        <div class="faq__answer">
+          <p>No problem, and no extra cost. We track your flight number, so your driver knows when you really land. Your free waiting time ([60] minutes) starts when the plane lands, not at the time you booked.</p>
+        </div>
+      </details>
+      <details>
+        <summary>Can we stop on the way?</summary>
+        <div class="faq__answer">
+          <p>Yes. Tell us where you want to stop when you book. [Short stops for food, toilets and photos are free.] [Longer stops or detours: $X per extra hour, added to your fixed price before you travel.]</p>
+        </div>
+      </details>
+      <details>
+        <summary>Is the price per person or per car?</summary>
+        <div class="faq__answer">
+          <p>Per car. One person or three people in a car pay the same price. A van takes up to 8 people for one van price.</p>
+        </div>
+      </details>
+      <details>
+        <summary>Do you have child seats?</summary>
+        <div class="faq__answer">
+          <p>Yes, on request and at no extra cost. Tell us your child's age and weight when you book, so we bring the right seat.</p>
+        </div>
+      </details>
+      <details>
+        <summary>Can I cancel?</summary>
+        <div class="faq__answer">
+          <p>Yes. Cancellation is free up to [24] hours before pickup. [Later than that: your policy here.] To cancel, just send us a WhatsApp message.</p>
+        </div>
+      </details>
+      <details>
+        <summary>Is it safe to travel at night?</summary>
+        <div class="faq__answer">
+          <p>Our drivers do airport pickups at night often, and the expressways are fine at night. On mountain roads, for example to Ella, we prefer daylight because of fog, sharp bends and animals on the road. If your flight lands late, we can take you to a hotel near the airport and continue in the morning.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     10. FINAL CALL TO ACTION + BOOKING FORM
+     ============================================================ -->
+<section class="section section--tea cta on-dark" id="book" aria-labelledby="cta-title">
+  <div class="wrap cta__grid">
+    <div>
+      <h2 id="cta-title">Tell us your route. We reply within 15 minutes, 6 AM – 11 PM.</h2>
+      <p class="cta__lead">Sri Lanka time (GMT+5:30). Message us on WhatsApp, or fill in the form. The form opens WhatsApp with your details, so you can check them before you send.</p>
+      <a class="btn btn--wa" href="https://wa.me/94XXXXXXXXX" data-wa="hello" data-track="whatsapp_click" data-track-location="final_cta">
+        <img class="wa-icon" src="img/whatsapp-icon.svg" alt="" width="20" height="20" onerror="this.remove()">
+        Message us on WhatsApp
+      </a>
+      <p class="status" data-status><span class="status__dot" aria-hidden="true"></span><span class="status__text">WhatsApp replies within 15 minutes, 6 AM – 11 PM Sri Lanka time.</span></p>
+      <ul class="cta__contact">
+        <li><span>WhatsApp</span> <a href="https://wa.me/94XXXXXXXXX" data-wa="hello" data-track="whatsapp_click" data-track-location="final_cta_number">+94 XX XXX XXXX</a></li>
+        <li><span>Email</span> <a href="mailto:[EMAIL]">[EMAIL]</a></li>
+        <li><span>Open</span> Every day, 6 AM – 11 PM</li>
+      </ul>
+    </div>
+
+    <form class="form" data-booking-form novalidate aria-labelledby="form-title">
+      <h3 id="form-title">Booking request</h3>
+      <p class="form__small">Takes about one minute. Fields without "optional" are needed.</p>
+
+      <div class="field">
+        <label for="b-name">Your name</label>
+        <input class="input" id="b-name" name="name" autocomplete="name" aria-describedby="err-name">
+        <span class="error-msg" id="err-name" aria-live="polite"></span>
+      </div>
+
+      <div class="form__row form__row--stack">
+        <div class="field">
+          <label for="b-pickup">Pickup</label>
+          <input class="input" id="b-pickup" name="pickup" list="places" placeholder="e.g. Colombo Airport" aria-describedby="err-pickup">
+          <span class="error-msg" id="err-pickup" aria-live="polite"></span>
+        </div>
+        <div class="field">
+          <label for="b-dropoff">Drop-off</label>
+          <input class="input" id="b-dropoff" name="dropoff" list="places" placeholder="e.g. Galle" aria-describedby="err-dropoff">
+          <span class="error-msg" id="err-dropoff" aria-live="polite"></span>
+        </div>
+      </div>
+      <datalist id="places"></datalist>
+
+      <div class="form__row">
+        <div class="field">
+          <label for="b-date">Date</label>
+          <input class="input" id="b-date" name="date" type="date" aria-describedby="err-date">
+          <span class="error-msg" id="err-date" aria-live="polite"></span>
+        </div>
+        <div class="field">
+          <label for="b-time">Pickup time</label>
+          <input class="input" id="b-time" name="time" type="time" aria-describedby="err-time">
+          <span class="error-msg" id="err-time" aria-live="polite"></span>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="b-flight">Flight number <span class="hint">(optional)</span></label>
+        <input class="input" id="b-flight" name="flight" autocomplete="off" placeholder="e.g. UL 504">
+      </div>
+
+      <div class="form__row">
+        <div class="field">
+          <label for="b-passengers">Passengers</label>
+          <select class="select" id="b-passengers" name="passengers" aria-describedby="err-passengers">
+            <option value="">Choose</option>
+            <option>1</option><option>2</option><option>3</option><option>4</option>
+            <option>5</option><option>6</option><option>7</option><option>8</option>
+            <option value="9">9 or more</option>
+          </select>
+          <span class="error-msg" id="err-passengers" aria-live="polite"></span>
+        </div>
+        <div class="field">
+          <label for="b-bags">Big bags</label>
+          <select class="select" id="b-bags" name="bags" aria-describedby="err-bags">
+            <option value="">Choose</option>
+            <option>0</option><option>1</option><option>2</option><option>3</option><option>4</option>
+            <option>5</option><option>6</option><option>7</option><option>8</option>
+            <option value="9">9 or more</option>
+          </select>
+          <span class="error-msg" id="err-bags" aria-live="polite"></span>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="b-hotel">Hotel name <span class="hint">(optional)</span></label>
+        <input class="input" id="b-hotel" name="hotel" placeholder="Where we pick you up or drop you off">
+      </div>
+
+      <button class="btn btn--primary btn--block" type="submit">
+        <img class="wa-icon" src="img/whatsapp-icon.svg" alt="" width="20" height="20" onerror="this.remove()">
+        Send on WhatsApp
+      </button>
+      <p class="form__small">Nothing is saved on this website. The form only writes your WhatsApp message.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================================
+     11. FOOTER
+     ============================================================ -->
+<footer class="site-footer on-dark">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <p class="footer__brand">[BRAND NAME]</p>
+        <p>Fixed-price private taxis for travellers in Sri Lanka. Airport pickups and city-to-city rides.</p>
+        <ul class="footer__list">
+          <li>WhatsApp: <a href="https://wa.me/94XXXXXXXXX" data-wa="hello" data-track="whatsapp_click" data-track-location="footer">+94 XX XXX XXXX</a></li>
+          <li>Email: <a href="mailto:[EMAIL]">[EMAIL]</a></li>
+          <li>Address: [STREET ADDRESS, TOWN]</li>
+          <li>SLTDA registration: [NUMBER]</li>
+          <li>Open every day, 6 AM – 11 PM (Sri Lanka time)</li>
+        </ul>
+      </div>
+
+      <nav aria-labelledby="footer-routes">
+        <h2 id="footer-routes">Route pages</h2>
+        <ul class="footer__list">
+          <li><a href="colombo-airport-to-galle-taxi.html">Colombo Airport to Galle taxi</a></li>
+          <li><a href="colombo-airport-to-kandy-taxi.html">Colombo Airport to Kandy taxi</a></li>
+          <li><a href="colombo-airport-to-sigiriya-taxi.html">Colombo Airport to Sigiriya taxi</a></li>
+          <li><a href="colombo-airport-to-ella-taxi.html">Colombo Airport to Ella taxi</a></li>
+          <li><a href="colombo-airport-to-mirissa-taxi.html">Colombo Airport to Mirissa taxi</a></li>
+          <li><a href="colombo-airport-to-colombo-taxi.html">Colombo Airport to Colombo taxi</a></li>
+          <li><a href="kandy-to-ella-taxi.html">Kandy to Ella taxi</a></li>
+          <li><a href="sigiriya-to-kandy-taxi.html">Sigiriya to Kandy taxi</a></li>
+          <li><a href="ella-to-mirissa-taxi.html">Ella to Mirissa taxi</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <h2>On this site</h2>
+        <ul class="footer__list">
+          <li><a href="#prices">Prices</a></li>
+          <li><a href="#how">How it works</a></li>
+          <li><a href="#included">What's included</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#book">Book</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__legal">
+      <p><strong>Privacy:</strong> this website does not store your personal details. The booking form only opens WhatsApp with your message. [We use Google Analytics to count visits and button clicks. Delete this sentence if you don't use it.]</p>
+      <p>© <span data-year>2026</span> [BRAND NAME]. [Registered business name, if different.]</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================
+     STICKY BAR (phones only)
+     ============================================================ -->
+<div class="sticky-bar">
+  <a class="btn btn--outline" href="#price-finder" data-track="get_price_click" data-track-location="sticky_bar">Get price</a>
+  <a class="btn btn--wa" href="https://wa.me/94XXXXXXXXX" data-wa="hello" data-track="whatsapp_click" data-track-location="sticky_bar">
+    <img class="wa-icon" src="img/whatsapp-icon.svg" alt="" width="20" height="20" onerror="this.remove()">
+    WhatsApp
+  </a>
+</div>
+
+</body>
+</html>
